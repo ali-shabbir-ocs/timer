@@ -1,0 +1,24 @@
+.main {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../../assets/bg01.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0px;
+  padding: 0px;
+
+  .heading {
+    h1 {
+      margin: 0px;
+      padding-top: 20%;
+      padding-left: 10%;
+      text-align: center;
+      font-size: 40px;
+      color: #392f4c;
+    }
+    h1::after {
+      border-bottom: 5px solid #392f4c;
+    }
+  }
+}

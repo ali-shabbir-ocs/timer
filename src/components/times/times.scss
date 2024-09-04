@@ -1,0 +1,53 @@
+.time-container {
+  width: 700px;
+  height: 250px;
+  //   margin-top: 10%;
+  margin-left: 30%;
+  padding-top: 5%;
+  display: flex;
+  justify-content: center;
+  //   background-color: black;
+
+  .each-container {
+    // background-color: rgba(240, 248, 255, 0);
+    width: 200px;
+    height: 150px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .time {
+      height: 150px;
+
+      color: white;
+
+      h1 {
+        font-size: 80px;
+      }
+    }
+    .display {
+      h3 {
+        color: white;
+      }
+    }
+  }
+}
+.buttons {
+  display: flex;
+  justify-content: center;
+  padding-left: 10%;
+  button {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 0px 10px;
+    border-radius: 20px;
+    border: 1px solid #392f4c;
+    background-color: white;
+
+    &:hover {
+      background-color: #392f4c;
+      color: white;
+    }
+  }
+}
