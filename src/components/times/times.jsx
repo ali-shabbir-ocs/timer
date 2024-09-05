@@ -9,13 +9,15 @@ const Times = () => {
         let intervalId;
         if (isRunning) {
             // setting time from 0 to 1 every 10 milisecond using javascript setInterval method
-            intervalId = setInterval(() => setTime(time + 1), 10 );
+            intervalId = setInterval(() => setTime(time + 1), 10);
         }
         return () => clearInterval(intervalId);
     }, [isRunning, time]);
 
+    //Days Calculation
+    const Days = Math.floor(time / (360000 * 24));
     // Hours calculation
-    const hours = Math.floor(time / 360000);
+    const hours = Math.floor((time / 360000) % 24);
 
     // Minutes calculation
     const minutes = Math.floor((time % 360000) / 6000);
@@ -38,6 +40,16 @@ const Times = () => {
     return (
         <Fragment>
             <div className="time-container">
+                {Days > 0 ? <div className="each-container">
+                    <div className="time">
+                        <h1>{Days.toString().padStart(2, "0")}</h1>
+                    </div>
+                    <div className="display">
+                        <h3>Days</h3>
+                    </div>
+                </div> : <div></div>}
+
+
                 <div className="each-container">
                     <div className="time">
                         <h1>{hours.toString().padStart(2, "0")}</h1>
